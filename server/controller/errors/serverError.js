@@ -1,7 +1,11 @@
 const {ValidationError}=require('joi');
 const { JsonWebTokenError } = require('jsonwebtoken');
 const { CustomError } = require('../../utils/helper');
+const { join } = require('path'); 
 
+const clintError = (req, res) => {
+  res.status(400).sendFile(join(__dirname, '..', '..', '..', 'public', 'html', '404.html'))
+}
 
 const serverError=(err, req, res, next)=>{
  
@@ -50,4 +54,7 @@ res.status(500)
 
 }
 
-module.exports=  serverError;
+module.exports=  {
+  serverError,
+  clintError
+};

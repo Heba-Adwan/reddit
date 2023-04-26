@@ -1,93 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reddit</title>
-    <script   
-      src="https://kit.fontawesome.com/9a8ddb3d78.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/reddit.css" />
-  </head>
-  <body>
-    <div class="page">
-      <div id="overlay"></div>
-      <!-- Start Header -->
-      <header>
-        <div class="container">
-          <div class="logo">
-            <h2>
-          <img src="/images/img.png">
-              <a href="/">Reddit</a>
-            </h2>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reddit</title>
+  <script src="https://kit.fontawesome.com/9a8ddb3d78.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/reddit.css" />
+</head>
+
+<body>
+  <div class="page">
+    <div id="overlay"></div>
+    <!-- Start Header -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h2>
+            <img src="/images/img.png">
+            <a href="/">Reddit</a>
+          </h2>
+        </div>
+        <ul class="nav">
+          <li class="create-post">
+            <a href="/html/post.html">Create Post</a>
+
+          </li>
+
+          <li class="logout" id="logout">
+            <a href="/view/index">Logout</a>
+
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- --------Profile -->
+    <section class="profile">
+      <div class="container">
+        <div class="profile-top">
+
+        </div>
+      </div>
+    </section>
+    <div class="postContainer">
+      <!-- <div class="post">
+        <div class="user">
+          <img src="/images/img.png" alt="" class="uiser-avatar">
+          <p class="username">alaa</p>
+        </div>
+        <div class="postContent">
+          <p class="content">My Post</p>
+          <img src="/images/postImg.jpg" alt="" class="post-image">
+        </div>
+        <div class="commentBox">
+          <div class="commentContent">
+            <h2>comment</h2>
+            <p>20-2-2023-3:00AM</p>
           </div>
-          <ul class="nav">
-            <li class="create-post">
-              <a href="/html/post.html">Create Post</a>
+          <input type="text" id="comment-box" placeholder=" comment">
+          <button id="comment" type="submit">Add Comment</button>
+          <ul id="unordered">
 
-            </li>
-          
-           <!--  -->
-           <div class="avatar"></div>
-           <!--  -->
-            <li class="logout"  id="logout">
-              <a href="/view/index" >Logout</a>
-
-            </li>
           </ul>
         </div>
-      </header>
-      <!-- End Header -->
-
-      <!-- --------Profile -->
-      <section class="profile">
-        <div class="container">
-          <div class="profile-top">
+      </div> -->
+    </div>
 
 
-             <!-- <div class="avatar">
-              <img src="https://www.gravatar.com/avatar/HASH" alt="avatar" />
-            </div>
-            <h3>
-              <a href="/home">Username</a>
-            </h3>  -->
 
 
-          </div>
-        </div>
-      </section>
-
-      <!--  -->
-      <!-- ---comment -->
-      <div class="commentBox">
-      <div class="commentContent">
-        <h2>Heba</h2>
-        <p>20-2-2023-3:00AM</p>
-      </div>
-        <input type="text" id="comment-box" placeholder=" comment">
-        <button id="comment" type="submit">Add Comment</button>
-        <ul id="unordered">
-           
-       </ul>
-      </div>
-   
-   
-   
-    <script src="/js/code.js"></script>
+    <script src="/js/post.js"></script>
     <script src="/js/logout.js"></script>
     <script src="/js/user.js"></script>
-    <script src="/js/dom.js"></script>
+    <script src="/js/postDom.js"></script>
 
 </body>
-</html>
 
-     
-   
-
-    
-    </div>
-  </body>
 </html>

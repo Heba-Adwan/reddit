@@ -7,26 +7,17 @@ const signupController=(req, res, next)=>{
   const {username,email, password}=req.body;
  
 
-  // throw new CustomError('Email Already Exist', 401)
 
  signupSchema.validateAsync({username,email, password},{abortEarly:false})
  .then((data)=>{
-  // return signupQuery(username,email, password).then()
   return bcrypt.hash(password, 10)
  }).then(hash=>({username,email, password: hash}))
  .then(data=>signupQuery(data))
  .then(data=>data.rows[0])
  .then(data=>{
-// console.log(data);
-// res.end()
 req.user=data;
 
-
-// .then(token=>({token, user: { ...data}}))  //data come from data.rows 
-
-
   res
- //, maxAge:1000*60*60*24
   .json({
     error:false,
     data:{

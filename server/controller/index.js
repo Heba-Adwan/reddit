@@ -1,4 +1,4 @@
-const {clientError, serverError} = require("./errors");
+const { clintError, serverError } = require('./errors/serverError');
 const indexPage = require("./pages/getIndex");
 const loginPage = require("./pages/getLoginPage");
 const signupPage = require("./pages/getSignupPage");
@@ -8,23 +8,19 @@ const { signupController, loginController, logoutController, getUsers, getUsersI
 
 module.exports={
   signupController,
-  clientError,
-  serverError,
-loginController,
-logoutController,
-loginPage,
-signupPage,
-homePage,
-indexPage,
-// getUsersName
-// getUsersId,
-// getUserPostsId
-getUsers,
-getUsersId,
-getUserPostsId,
-profilePage
+  loginController,
+  logoutController,
+  loginPage,
+  signupPage,
+  homePage,
+  indexPage,
+  getUsers,
+  getUsersId,
+  getUserPostsId,
+  profilePage,
+  clintError,
+  serverError
+
 
 
 }
-
- 

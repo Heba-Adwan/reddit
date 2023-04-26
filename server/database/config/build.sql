@@ -14,11 +14,11 @@ CREATE TABLE users(
 
 CREATE TABLE posts(
   id SERIAL PRIMARY KEY,
-  title VARCHAR(255) NOT NULL,
   content TEXT ,
+  image TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-   user_id INTEGER NOT NULL REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE
+  user_id INTEGER NOT NULL REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE comments(
@@ -34,4 +34,4 @@ COMMIT;
 
 
 
--- C:/Users/hp/Desktop/reddit/server/database/config/build.sql
+

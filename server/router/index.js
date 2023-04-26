@@ -6,7 +6,7 @@ const router=require('express').Router();
 
 
   router.use('/users', userRouter); //  /api/v1/users/signup
-  router.use('/posts', postRouter)  //نفس الشي اعمله جوا الكونترول
+  router.use('/post', postRouter)  //نفس الشي اعمله جوا الكونترول
 router.use('/view', viewRouter )
 
 

@@ -9,13 +9,9 @@ module.exports={
   signupController,
   loginController,
   logoutController,
-  //  getUsersName
-  
-  // getUsersId,
-  // getUserPostsId
   getUsers,
   getUsersId,
-getUserPostsId
+  getUserPostsId
   
 
 
