@@ -30,10 +30,10 @@ const { getUsersQuery, getUsersIdQuery, getUserPostsIdQuery } = require('../../d
 const getUsers = (req, res) => {
 
   const {user}=req
-  console.log(user);
   res.json({
     data:user
   })
+
 }
 
 

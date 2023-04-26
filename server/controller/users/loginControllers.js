@@ -28,7 +28,7 @@ const loginController=(req, res, next)=>{
 
   }).then(()=>{
     const {id, username, email}=req.user;
-    return signToken({username:username, isLogged:true})
+    return signToken({username:username, userId: id, isLogged:true})
     
   })
   .then(token=>{

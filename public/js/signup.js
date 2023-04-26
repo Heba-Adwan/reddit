@@ -23,6 +23,9 @@ signUp.addEventListener('submit', (e)=>{
   // .then(console.log)
 // .catch(console.log);
   .then((result) => {
+    if (result.err) {
+      throw new Error(result.data)
+    }
     if (result && result.data) {
       message.textContent = result.data.message;
     }
