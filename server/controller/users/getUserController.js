@@ -28,23 +28,14 @@ const { getUsersQuery, getUsersIdQuery, getUserPostsIdQuery } = require('../../d
 
 
 const getUsers = (req, res) => {
-  const token = req.cookies.token
-  if (token) {
-    jwt.verify(token, process.env.SECRET_KEY, (err, decoded) => {
-      if (err) {
-        res.json({ msg: 'verify token error' })
-      } else {
-        req.myToken = decoded
-      }
-    })
-  }
-  const { myToken } = req
-  if (myToken) {
-    getUsersQuery(myToken)
-      .then((data) => res.status(200).json(data.rows))
-      .catch((err) => console.log(err))
-  }
+
+  const {user}=req
+  console.log(user);
+  res.json({
+    data:user
+  })
 }
+
 
 const getUsersId = (req, res) => {
   const userId = req.params.id
