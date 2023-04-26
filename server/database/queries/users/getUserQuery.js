@@ -24,23 +24,23 @@ const connection = require("../../config/connection")
 const getUsersQuery = (myToken) => {
   const userId = myToken.id
   const sql = {
-    text: 'SELECT * FROM users WHERE id = $1',
+    text: 'SELECT id,username, email, avatar,  FROM users WHERE  id=$1',
     values: [userId]
   }
 
   return connection.query(sql)
 }
 
-const getUsersIdQuery = (userId) => {
-  const sql = {
-    text: 'SELECT * FROM users WHERE id = $1',
-    values: [userId]
-  }
+// const getUsersIdQuery = (userId) => {
+//   const sql = {
+//     text: 'SELECT * FROM users WHERE id = $1',
+//     values: [userId]
+//   }
 
-  return connection.query(sql)
-}
+//   return connection.query(sql)
+// }
 
-module.exports = { getUsersQuery, getUsersIdQuery }
+module.exports = { getUsersQuery }
 
 
 
