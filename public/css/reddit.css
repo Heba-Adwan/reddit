@@ -1,0 +1,265 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* :root {
+  --main-color: #ede4e6;
+  --primary-color: #c21632;
+  --sec-color: #0084c3;
+  --main-duration: 0.5s;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #fcfeff;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Container */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+
+/*  Header */
+header {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 2px 6px,
+    rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .logo a {
+  color: black;
+ 
+}
+
+header .nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .nav li, header .nav div {
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+
+}
+
+header .nav div {
+  padding: 0 10px;
+}
+
+header .nav li.create-post {
+  cursor: pointer;
+}
+
+
+header .nav li a {
+  background-color: rgb(221, 12, 12);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px;
+  padding-bottom: 7px;
+  /* padding: 5px 15px 5px 15px; */
+  transition: background-color 0.3s ease;
+
+}
+
+
+
+header .nav .avatar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .nav .avatar span {
+  color: #a31d1d00;
+  font-size: 15px;
+}
+
+header .nav li.logout {
+  cursor: pointer;
+}
+
+@media(max-width: 767px) {
+  header .container{
+    width: 100%;
+    justify-content: space-around;
+  }
+  header .logo a {
+    font-size: 20px;
+  }
+  header .nav li:not(:first-child){
+    padding: 0 10px;
+  }
+  header .nav li.logout {
+    padding: 0 20px;
+  }
+  header .nav li a {
+    font-size: 15px;
+  }
+ 
+}
+
+
+
+/* comment */
+
+#comment-box, #comment {
+  border: none;
+  border-radius: 5px;
+}
+#comment:hover{
+  background-color: rgb(225, 45, 60);
+}
+
+.commentBox{
+  background-color: #f3f3f3;
+  box-shadow: 0px 2px rgb(87, 87, 87) ;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+width: 50%;
+padding: 10px;
+margin: auto;
+margin-top: 40px;
+}
+
+
+
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 20%;
+  padding: 30px 0 30px 0;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: rgb(86, 84, 84);
+  color: #f1f0f0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  width:20%;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+  margin-top: 5%;
+}
+
+button[type="submit"]:hover {
+  background-color:rgb(236, 15, 15);
+}
+
+
+/* search */
+/* Style the search field */
+
+form.example{
+  text-align: center;
+  display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: unset;
+  float: left;
+  width: 350px;
+  background: #f1f1f1;
+ margin-right: 50px;
+  
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  margin-top: 20px;
+  background: #f1f1f1;
+  color: rgb(93, 92, 92);
+  font-size: 17px;
+  border:unset;
+  border-left: none; 
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #e7ecf1;
+}

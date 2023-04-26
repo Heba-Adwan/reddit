@@ -8,10 +8,12 @@ const {
   NODE_ENV
 }=process.env;
 
+console.log( DEV_DB_URL);
+
 
 const options={
-  connectionString: NODE_ENV==='development'?DEV_DB_URL:DATABASE_URL,
-  ssl:NODE_ENV==='production'?{rejectUnauthorized:false}:true
+  connectionString: DEV_DB_URL ,
+  ssl:NODE_ENV==='production'?{rejectUnauthorized:false}:false
 };
 
 const connection=new Pool(options)
