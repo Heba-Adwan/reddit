@@ -15,7 +15,8 @@ fetch('/users/login', {
 
 .then(data  =>data.json())
 .then(data=> {
-if(!data.err){
+  
+if(!data.error){
   window.location.href='/view/home'
 }
 else{

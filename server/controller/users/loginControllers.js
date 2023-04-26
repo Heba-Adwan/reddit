@@ -7,8 +7,6 @@ const {  loginQuery } = require('../../database');
 const loginController=(req, res, next)=>{
   const {email, password} =req.body;
 
-
-
   loginQuery({email})
   .then(({rows})=>{
     if(!rows.length){
